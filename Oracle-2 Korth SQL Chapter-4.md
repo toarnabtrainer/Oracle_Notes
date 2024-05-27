@@ -24,7 +24,8 @@ drop table customer;
 drop table depositor;
 drop table borrower;
 drop table loan;
-	
+</pre>
+<pre>
 create table depositor (
 	customer_name varchar(20),
 	account_number varchar(20)
