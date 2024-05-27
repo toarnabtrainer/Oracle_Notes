@@ -1,12 +1,11 @@
 # Korth Chapter - 4 (Used Sample Database and Tables)<br>
 
 ![image](https://github.com/toarnabtrainer/MySQL_Notes/assets/111301975/836b9aaf-c21c-4cbd-bf12-05be5347dd81)
-
+<hr>
 <b>
 <pre>
-------------------------------------------------- Section-1
-*********************************************
 -- Korth Chapter - 4, Page - 143
+------------------------------------------------- Section-1
 -- All the schemas:
 -- Branch(branch_name, branch_city, assets)
 -- Account(account_number, balance, branch_name)
@@ -25,6 +24,7 @@ drop table depositor;
 drop table borrower;
 drop table loan;
 </pre>
+<hr>
 <pre>
 create table depositor (
 	customer_name varchar(20),
@@ -70,7 +70,7 @@ create table customer (
 	customer_city varchar(20)
 );
 </pre>
-<br>
+<hr>
 <pre>
 -- truncate table account;
 insert into account values ('A-101','Downtown',500);
@@ -164,8 +164,9 @@ select * from customer;
 select * from depositor;
 select * from loan;
 </pre>
+<hr>
 
-* **Demonstration of Queries of that Chapter**
+## Demonstration of Queries of the Chapter
 
 <pre>
 -- All the schemas:
@@ -412,7 +413,6 @@ where customer_name not in (select customer_name from depositor);
 select distinct customer_name from borrower   -- set difference
 minus
 select customer_name from depositor;
-
 
 -- Set Comparisons
 select Distinct T.branch_name
