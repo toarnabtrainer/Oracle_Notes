@@ -2,7 +2,7 @@
 
 ![image](https://github.com/toarnabtrainer/MySQL_Notes/assets/111301975/836b9aaf-c21c-4cbd-bf12-05be5347dd81)
 
-
+<b>
 <pre>
 ------------------------------------------------- Section-1
 *********************************************
@@ -714,4 +714,4 @@ create index index_amount on loan(amount);
 alter table loan drop index index_amount;
 
 </pre>
-
+</b>
