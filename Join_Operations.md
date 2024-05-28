@@ -76,7 +76,7 @@ select * from employee e join department d on(e.deptno = d.deptno);
 
 <pre>
 -- 2. Non-Equi Join
--- A join which contains an operator other than equal to '=' in the joins condition.
+-- A join which contains an operator other than equal to '=' in the join condition.
 select * from employee e, department d where e.deptno > d.deptno;
 -- Or
 select * from employee e join department d on(e.deptno > d.deptno);
