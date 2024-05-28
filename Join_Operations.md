@@ -54,7 +54,7 @@ select * from employee;
 
 <pre>
 -- 1. Equi Join
--- A join which contains an equal to '=' operator in the joins condition.
+-- A join which contains an equal to '=' operator in the join condition.
 select * from employee e, department d where e.deptno = d.deptno;
 </pre>
 
