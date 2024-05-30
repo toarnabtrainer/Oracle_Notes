@@ -513,7 +513,9 @@ group by branch_name;
 
 select * from branch_total_loan;
 </pre>
+
 <hr>
+
 <pre>
 -- Derived Relations
 drop table result;
@@ -535,7 +537,9 @@ select * from result;
 drop table result;
 
 </pre>
+
 <hr>
+
 <pre>
 ------------------------------------------------- Section-2
 -- Modification of the Database
