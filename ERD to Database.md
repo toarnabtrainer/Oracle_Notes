@@ -130,24 +130,24 @@ SELECT * FROM employee;
 DESCRIBE employee;
 
 -- Insert into customer
-INSERT INTO customer (customer_name, city_id, customer_address, next_call_date, ts_inserted) VALUES ('Jewelry Store', 4, 'Long Street 120', '2020-01-21', '2020-01-09 14:01:20');
-INSERT INTO customer (customer_name, city_id, customer_address, next_call_date, ts_inserted) VALUES ('Bakery', 1, 'Kurfürstendamm 25', '2020-02-21', '2020-01-09 17:52:15');
-INSERT INTO customer (customer_name, city_id, customer_address, next_call_date, ts_inserted) VALUES ('Café', 1, 'Tauentzienstraße 44', '2020-01-21', '2020-01-10 08:02:49');
-INSERT INTO customer (customer_name, city_id, customer_address, next_call_date, ts_inserted) VALUES ('Restaurant', 3, 'Ulica lipa 15', '2020-01-21', '2020-01-10 09:20:21');
+INSERT INTO customer (customer_name, city_id, customer_address, next_call_date, ts_inserted) VALUES ('Jewelry Store', 4, 'Long Street 120', TO_DATE('2020-01-21', 'YYYY-MM-DD'), TO_TIMESTAMP('2020-01-09 14:01:20', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO customer (customer_name, city_id, customer_address, next_call_date, ts_inserted) VALUES ('Bakery', 1, 'Kurfürstendamm 25', TO_DATE('2020-02-21', 'YYYY-MM-DD'), TO_TIMESTAMP('2020-01-09 17:52:15', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO customer (customer_name, city_id, customer_address, next_call_date, ts_inserted) VALUES ('Café', 1, 'Tauentzienstraße 44', TO_DATE('2020-01-21', 'YYYY-MM-DD'), TO_TIMESTAMP('2020-01-10 08:02:49', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO customer (customer_name, city_id, customer_address, next_call_date, ts_inserted) VALUES ('Restaurant', 3, 'Ulica lipa 15', TO_DATE('2020-01-21', 'YYYY-MM-DD'), TO_TIMESTAMP('2020-01-10 09:20:21', 'YYYY-MM-DD HH24:MI:SS'));
 SELECT * FROM customer;
 DESCRIBE customer;
 
 -- Insert into call_table
-INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (1, 4, '2020-01-11 09:00:15', '2020-01-11 09:12:22', 2);
-INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (1, 2, '2020-01-11 09:14:50', '2020-01-11 09:20:01', 2);
-INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (2, 3, '2020-01-11 09:02:20', '2020-01-11 09:18:05', 3);
-INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (1, 1, '2020-01-11 09:24:15', '2020-01-11 09:25:05', 3);
-INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (1, 3, '2020-01-11 09:26:23', '2020-01-11 09:33:45', 2);
-INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (1, 2, '2020-01-11 09:40:31', '2020-01-11 09:42:32', 2);
-INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (2, 4, '2020-01-11 09:41:17', '2020-01-11 09:45:21', 2);
-INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (1, 1, '2020-01-11 09:42:32', '2020-01-11 09:46:53', 3);
-INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (2, 1, '2020-01-11 09:46:00', '2020-01-11 09:48:02', 2);
-INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (2, 2, '2020-01-11 09:50:12', '2020-01-11 09:55:35', 2);
+INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (1, 4, TO_TIMESTAMP('2020-01-11 09:00:15', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2020-01-11 09:12:22', 'YYYY-MM-DD HH24:MI:SS'), 2);
+INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (1, 2, TO_TIMESTAMP('2020-01-11 09:14:50', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2020-01-11 09:20:01', 'YYYY-MM-DD HH24:MI:SS'), 2);
+INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (2, 3, TO_TIMESTAMP('2020-01-11 09:02:20', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2020-01-11 09:18:05', 'YYYY-MM-DD HH24:MI:SS'), 3);
+INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (1, 1, TO_TIMESTAMP('2020-01-11 09:24:15', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2020-01-11 09:25:05', 'YYYY-MM-DD HH24:MI:SS'), 3);
+INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (1, 3, TO_TIMESTAMP('2020-01-11 09:26:23', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2020-01-11 09:33:45', 'YYYY-MM-DD HH24:MI:SS'), 2);
+INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (1, 2, TO_TIMESTAMP('2020-01-11 09:40:31', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2020-01-11 09:42:32', 'YYYY-MM-DD HH24:MI:SS'), 2);
+INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (2, 4, TO_TIMESTAMP('2020-01-11 09:41:17', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2020-01-11 09:45:21', 'YYYY-MM-DD HH24:MI:SS'), 2);
+INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (1, 1, TO_TIMESTAMP('2020-01-11 09:42:32', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2020-01-11 09:46:53', 'YYYY-MM-DD HH24:MI:SS'), 3);
+INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (2, 1, TO_TIMESTAMP('2020-01-11 09:46:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2020-01-11 09:48:02', 'YYYY-MM-DD HH24:MI:SS'), 2);
+INSERT INTO call_table (employee_id, customer_id, start_time, end_time, call_outcome_id) VALUES (2, 2, TO_TIMESTAMP('2020-01-11 09:50:12', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2020-01-11 09:55:35', 'YYYY-MM-DD HH24:MI:SS'), 2);
 SELECT * FROM call_table;
 DESCRIBE call_table;
 
