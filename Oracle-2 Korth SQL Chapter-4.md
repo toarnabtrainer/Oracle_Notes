@@ -526,6 +526,16 @@ create table result as
 <pre>
 -- drop table result;
 select * from result;
+
+drop table result;
+create table result as
+    (select branch_name, avg_balance
+     from
+        (select branch_name, avg (balance) avg_balance
+         from account
+         group by branch_name)
+     where avg_balance > 600);
+select * from result;
 </pre>
 <hr>
 <pre>
