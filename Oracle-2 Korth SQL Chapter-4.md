@@ -521,10 +521,6 @@ create table result as
 (select branch_name as new_branch_name, avg(balance) as new_avg_balance
  from account
  group by branch_name);
-</pre>
-<hr>
-<pre>
--- drop table result;
 select * from result;
 
 drop table result;
@@ -536,6 +532,8 @@ create table result as
          group by branch_name)
      where avg_balance > 600);
 select * from result;
+drop table result;
+
 </pre>
 <hr>
 <pre>
