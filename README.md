@@ -8,3 +8,8 @@
 * **SQL Tutorial for Beginners: Learn SQL in 7 Days:** https://www.guru99.com/sql.html
 
 <hr>
+
+## Live Oracle SQL Online Terminal:
+* **Live SQL:** https://livesql.oracle.com
+
+<hr>
