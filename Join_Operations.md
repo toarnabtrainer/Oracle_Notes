@@ -116,8 +116,7 @@ select * from employee, department;
 -- 6. Outer Join
 -- Outer join gives the non-matching records along with matching records.
 --     6 a. Outer Join - Left outer
---          This will display all the matching records and the records which are in left hand side table those that are not
---          in right hand side table.
+--          All records from the left table and maching records from the right table
 select * from employee e left outer join department d on (e.deptno = d.deptno);
 --          Or
 select * from employee e, department d where e.deptno = d.deptno(+);
@@ -127,8 +126,7 @@ select * from employee e, department d where e.deptno = d.deptno(+);
 
 <pre>
 --     6 b. Outer Join - Right outer
---          This will display all the matching records and the records which are in right hand side table those that are not
---          in left hand side table.
+--           Maching records from the left table and all records from the right table
 select * from employee e right outer join department d on (e.deptno = d.deptno);
 --          Or
 select * from employee e, department d where e.deptno(+) = d.deptno;
